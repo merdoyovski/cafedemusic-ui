@@ -10,7 +10,11 @@ export const Sidebar = (props: any) => {
       <div className="flex flex-col  gap-2">
         {SidebarItems.map((item) => {
           return (
-            <SidebarItem setPage={props.setPage} item={item}></SidebarItem>
+            <SidebarItem
+              setPage={props.setPage}
+              item={item}
+              key={item.id}
+            ></SidebarItem>
           );
         })}
       </div>
