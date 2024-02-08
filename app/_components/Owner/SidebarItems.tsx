@@ -9,19 +9,19 @@ export const SidebarItems: ISidebarItem[] = [
   {
     id: 1,
     title: "Siparişler",
-    path: "/orders",
+    path: "orders",
     icon: <MdOutlineFastfood size={IconSize} />,
   },
   {
     id: 2,
     title: "Müzikler",
-    path: "/musics",
+    path: "musics",
     icon: <CgMusicSpeaker size={IconSize} />,
   },
   {
     id: 3,
     title: "Ayarlar",
-    path: "/settings",
+    path: "settings",
     icon: <IoSettingsOutline size={IconSize} />,
   },
 ];

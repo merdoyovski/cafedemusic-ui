@@ -9,16 +9,27 @@ export const Sidebar = (props: any) => {
       </div>
       <div className="flex flex-col  gap-2">
         {SidebarItems.map((item) => {
-          return <SidebarItem item={item}></SidebarItem>;
+          return (
+            <SidebarItem setPage={props.setPage} item={item}></SidebarItem>
+          );
         })}
       </div>
     </div>
   );
 };
 
-const SidebarItem = ({ item }: { item: ISidebarItem }) => {
+const SidebarItem = ({
+  item,
+  setPage,
+}: {
+  item: ISidebarItem;
+  setPage: any;
+}) => {
   return (
-    <div className="h-[50px] flex items-center   hover:bg-light-gray ">
+    <div
+      className="h-[50px] flex items-center   hover:bg-light-gray "
+      onClick={() => setPage(item.path)}
+    >
       <div className="ml-[35px]   flex gap-2">
         {item.icon && item.icon}
         {item.title}
