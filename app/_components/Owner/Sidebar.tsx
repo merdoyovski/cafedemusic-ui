@@ -7,7 +7,7 @@ export const Sidebar = (props: any) => {
       <div className="h-[70px] flex items-center justify-center bg-sea-blue text-lg font-semibold text-almost-white ">
         Cafe de Lostar
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col  gap-2">
         {SidebarItems.map((item) => {
           return <SidebarItem item={item}></SidebarItem>;
         })}
