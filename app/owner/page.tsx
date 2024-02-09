@@ -8,7 +8,7 @@ import { OrderContent } from "../_components/Owner/Order.content";
 import { SettingsContent } from "../_components/Owner/Settings.content";
 
 export default function OwnerPage() {
-  const [page, setPage] = useState("music");
+  const [page, setPage] = useState("musics");
 
   let content;
   if (page === "musics") {
