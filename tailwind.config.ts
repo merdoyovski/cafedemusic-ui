@@ -15,6 +15,8 @@ const config: Config = {
         "sea-blue": "#00ADB5",
         "darkish-gray": "#393E46",
         "almost-black": "#222831",
+        "whiteish-gray": "#6C7882",
+        "spotify-green": "#1DB954",
       },
 
       screens: {
