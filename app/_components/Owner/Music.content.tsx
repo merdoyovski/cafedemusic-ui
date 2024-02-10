@@ -14,6 +14,11 @@ export const MusicContent = (props: any) => {
 
   const getCurrentSong = async () => {
     const result = await GetCurrentSong(token);
+
+    if (result.data === "") {
+      setCurrentSong("No song playing");
+      return;
+    }
     const song = result.data.item.name;
     const artist = result.data.item.artists[0].name;
     if (!song || !artist) {
@@ -24,11 +29,13 @@ export const MusicContent = (props: any) => {
 
   const getCurrentQueue = async () => {
     const result = await GetCurrentQueue(token);
-    console.log("result", result);
+
     const queue = result.data.queue;
     const queuedSongs: ISong[] = [];
+    if (!queue) {
+      return;
+    }
     for (let song of queue) {
-      console.log("song", song);
       const artist = song.artists[0].name;
       const name = song.name;
       const image = song.album.images[0].url;
