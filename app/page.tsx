@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main className="flex w-full h-full justify-center items-center gap-4 bg-light-gray">
       <div className="bg-almost-white w-[300px] h-[300px] rounded-xl shadow-md flex flex-col items-center">
-        <text className="mt-4">Cafe de Lostar'a hoşgeldin!</text>
+        <text className="mt-4">{"Cafe de Lostar'a hoşgeldin!"}</text>
         <div className="flex mt-16 gap-2">
           <Button
             text="Üye ol"
