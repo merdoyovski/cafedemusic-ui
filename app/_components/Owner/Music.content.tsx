@@ -69,8 +69,8 @@ export const MusicContent = (props: any) => {
         </div>
         <div className="bg-almost-white w-full h-auto rounded-xl flex flex-col p-4 shadow-sm">
           Sıradaki Şarkılar
-          {queuedSongs.map((song) => (
-            <div>{song.name + " - " + song.artist}</div>
+          {queuedSongs.map((song, index) => (
+            <div key={index}>{song.name + " - " + song.artist}</div>
           ))}
         </div>
         <div className="bg-almost-white w-full h-[200px] rounded-xl flex flex-col p-4 shadow-sm">
