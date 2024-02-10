@@ -1,4 +1,4 @@
-import { Spotify } from "../Spotify/Spotify";
+import { Spotify } from "./Spotify/Spotify";
 
 export const OrderContent = (props: any) => {
   return (

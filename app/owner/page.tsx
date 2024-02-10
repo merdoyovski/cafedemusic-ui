@@ -1,11 +1,12 @@
 "use client";
-import { MusicContent } from "../_components/Owner/Music.content";
-import { Header } from "../_components/Owner/Header";
-import { Sidebar } from "../_components/Owner/Sidebar";
+import { MusicContent } from "../_components/Music.content";
+import { Header } from "../_components/Header";
+import { Sidebar } from "../_components/Sidebar";
 import { Spotify } from "../_components/Spotify/Spotify";
 import { useState } from "react";
-import { OrderContent } from "../_components/Owner/Order.content";
-import { SettingsContent } from "../_components/Owner/Settings.content";
+import { OrderContent } from "../_components/Order.content";
+import { SettingsContent } from "../_components/Settings.content";
+import { MenuContent } from "../_components/Menu.content";
 
 export default function OwnerPage() {
   const [page, setPage] = useState("musics");
@@ -17,6 +18,8 @@ export default function OwnerPage() {
     content = <OrderContent />;
   } else if (page === "settings") {
     content = <SettingsContent />;
+  } else if (page === "menu") {
+    content = <MenuContent />;
   }
 
   return (

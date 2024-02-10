@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Spotify } from "../Spotify/Spotify";
+import { Spotify } from "./Spotify/Spotify";
 import {
   GetCurrentQueue,
   GetCurrentSong,
