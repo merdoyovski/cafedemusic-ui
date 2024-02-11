@@ -3,13 +3,14 @@ import { MusicContent } from "../_components/Music.content";
 import { Header } from "../_components/Header";
 import { Sidebar } from "../_components/Sidebar";
 import { Spotify } from "../_components/Spotify/Spotify";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { OrderContent } from "../_components/Order.content";
 import { SettingsContent } from "../_components/Settings.content";
 import { MenuContent } from "../_components/Menu/Menu.content";
+import { LoadingContent } from "../_components/Loading.content";
 
 export default function OwnerPage() {
-  const [page, setPage] = useState("musics");
+  const [page, setPage] = useState("");
 
   let content;
   if (page === "musics") {
@@ -20,7 +21,24 @@ export default function OwnerPage() {
     content = <SettingsContent />;
   } else if (page === "menu") {
     content = <MenuContent />;
+  } else {
+    content = <LoadingContent />;
   }
+
+  useEffect(() => {
+    if (page === "") {
+      return;
+    }
+    localStorage.setItem("page", page);
+    console.log(page);
+  }, [content]);
+
+  useEffect(() => {
+    const page = localStorage.getItem("page");
+
+    console.log(page);
+    setPage(page || "orders");
+  }, []);
 
   return (
     <div className="bg-light-gray flex w-screen h-screen">

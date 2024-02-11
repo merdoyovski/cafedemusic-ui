@@ -27,7 +27,7 @@ export const MenuContent = (props: any) => {
   const setEditItemModalOpen = useModal((state) => state.setEditItemModalOpen);
   const editItemModalOpen = useModal((state) => state.editItemModalOpen);
 
-  const menuItems: IMenuItem[] = [
+  const [menuItems, setMenuItems] = useState<IMenuItem[]>([
     {
       title: "Cheeseburger",
       category: "Meal",
@@ -84,7 +84,7 @@ export const MenuContent = (props: any) => {
       price: 7,
       image: "/latte.png",
     },
-  ];
+  ]);
 
   const handleNewItemClick = () => {
     setAddNewItemModalOpen();
@@ -98,7 +98,7 @@ export const MenuContent = (props: any) => {
     // Set the state accordingly
     setMeals(mealsArray);
     setDrinks(drinksArray);
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, [menuItems]); // Empty dependency array ensures this effect runs only once
 
   return (
     <div className=" w-full h-full shadow-[inset_0px_1px_10px_0px_rgba(0,0,0,0.1)]">
