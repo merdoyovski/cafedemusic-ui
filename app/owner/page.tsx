@@ -6,7 +6,7 @@ import { Spotify } from "../_components/Spotify/Spotify";
 import { useState } from "react";
 import { OrderContent } from "../_components/Order.content";
 import { SettingsContent } from "../_components/Settings.content";
-import { MenuContent } from "../_components/Menu.content";
+import { MenuContent } from "../_components/Menu/Menu.content";
 
 export default function OwnerPage() {
   const [page, setPage] = useState("musics");

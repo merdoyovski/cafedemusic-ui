@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { cn } from "./_utils/tw.utils";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
+      <body className={cn(rubik.className, "overflow-x-hidden")}>
         <div className="w-screen h-screen ">{children}</div>
       </body>
     </html>
